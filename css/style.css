@@ -1,0 +1,110 @@
+.navbar{
+	padding: 1%;
+	background-color: #FF6D00FF;
+}
+.navbar-brand{
+	margin-right:5%;
+	float: left;
+}
+
+.image{
+  min-width: 80vw;
+}
+
+.little{
+  font-size: 60%;
+}
+
+.footer{
+	font-size: 120%;
+	margin-top: 1em;
+	padding: 2%;
+	text-align: center;
+	background-color: #BDDD21FF;
+}
+
+.carousel-item{
+	height: 88vh;
+}
+
+.info{
+	margin-top:10%;
+}
+.quote{
+	margin:2%;
+	text-decoration: underline;
+	font-size: 170%;
+	color: red;
+}
+
+.card{
+	margin:2%;
+	padding:2%;
+}
+
+.jankari{
+	font-size: 150%;
+	padding: 1%;
+}
+
+.first{
+	display: inline;
+}
+.donors{
+	margin-top: 7em;
+}
+
+.car{
+	background-color: #F7A807FF; 
+}
+
+.body{
+	background-color: #F79107FF; 
+}
+.mb-0{
+	text-decoration: underline;
+}
+
+.card-body{
+	background-color:#FFC000FF; 
+}
+
+
+.quick-links{
+  margin-top: 4em;
+}
+
+
+
+.d-flex{
+  padding:1%;
+}
+
+
+
+@media(min-width: 414px){
+  .quick-links{
+    display: none;
+  }
+}
+
+
+.btn{
+  margin:1%;
+}
+
+
+#DonarInformation,#EventInformation{
+  padding:15%;
+  padding-bottom:0%;
+  padding-top:5%;
+}
+.form{
+  padding:3%;
+  margin:1%;
+}
+
+.form-heading{
+  margin-bottom: 2%;
+}
+
