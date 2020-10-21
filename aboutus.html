@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="bootstrap-social/bootstrap-social.css">
     <script src = "https://gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
     <script src = "https://gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
     <script src = "https://gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
@@ -13,9 +13,11 @@
     <script src = "aboutusscript.js"></script>
     <link rel="stylesheet" href="css/style.css">
 	<title>!! ॐ श्री साईंनाथाय नम: !!</title>
+  <link rel="shortcut icon" href="images/icon.jpg">
+
 </head>
 <body class="body">
-	<nav class="navbar navbar-light navbar-expand-sm fixed-top">
+	<nav class="navbar navbar-dark navbar-expand-sm fixed-top">
 	    <div class="container">
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
 	        <span class="navbar-toggler-icon"></span>
@@ -45,6 +47,7 @@
             <div class="card-header text-center" role="tab" id="mandir-history-head">
               <h3 class="mb-0">
                 <a data-toggle="collapse" data-target="#mandir-history">संस्थान का इतिहास
+                  <span class="btn btn-success">click here</span>
                 </a>
               </h3>
             </div>
@@ -64,6 +67,7 @@
               <h3 class="mb-0">
                 <a data-toggle="collapse" data-target="#event-info">  <!-- edit for events -->
                आने वाले कार्यक्रमों की जानकारी
+               <span class="btn btn-success">click here</span>
                 </a>
               </h3>
             </div>
@@ -74,13 +78,16 @@
         	<h2 class="text-center">
         		आने वाले कार्यक्रमों की जानकारी :
         	</h2>
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead class="thead-dark">
+          <div class="offset-md-1 table-responsive">
+            <table class="sad table table-striped">
+              <thead class="font">
                 <tr>
-                  <th>दिनांक</th>
-                  <th>दिवस</th>
-                  <th>कार्यक्रम </th>
+                  <th class="text-center">दिनांक</th>
+                  <th class="text-center">दिवस</th>
+                  <th class = "text-center">
+                    समय</th>
+                  <th class="text-center">कार्यक्रम </th>
+
                 </tr>
               </thead>
               <tbody id="getEventInformation">
@@ -98,19 +105,20 @@
 
           <div class="card">
             <div class="card-header text-center" role="tab" id="prasad-info-head">
-                <h3 class="mb-0"><a data-toggle="collapse" data-target="#prasad-info">महाप्रसाद वितरण की जानकारी</a></h3>
+                <h3 class="mb-0"><a data-toggle="collapse" data-target="#prasad-info">महाप्रसाद वितरण की जानकारी <span class="btn btn-success">click here</span></a></h3>
             </div>
             <div class="collapse" data-parent="#accordion" id="prasad-info">
               <div class="card-body">
-                <p class="d-sm-block"><blockquote class="quote blockquote text-center">अन्नतकोटी ब्रम्हाणनायक राजाधिराज योगीराज परब्रह्म श्री सचिदानंद सदगुरुं साईनाथ महाराज की जय</blockquote></p>
+                <p class="d-sm-block"><blockquote class="quote blockquote text-center">अन्नतकोटी ब्रह्म्मांड
+ राजाधिराज योगीराज परब्रह्म श्री सचिदानंद सदगुरुं साईनाथ महाराज की जय</blockquote></p>
 	<div class="khichdi row row-content">
         <div class="col-12 col-sm-9 offset-sm-1">
           <h2 class="text-center">
              श्री साईं बाबा की खिचड़ी (महाप्रसाद) की सामग्री
           </h2>
           <div class="table-responsive">
-            <table class="table table-striped">
-              <thead class="thead-dark">
+            <table class="sad table table-striped">
+              <thead class="font">
                 <tr>
                 	<th>सामग्री</th>
                 	<th>भार</th>
@@ -214,6 +222,329 @@
 
 	</div>
 </div>
+          <div class="card">
+            <div class="card-header text-center" role="tab" id="sadasya-info-head">
+                <h3 class="mb-0"><a data-toggle="collapse" data-target="#sadasya-info">ॐ साईं राम श्री बालमुर्ति साईं बाबा (श्री हरीश बाबा) संस्थान,शिर्डी पुरम कोलार रोड भोपाल सदस्य सूची <span class="btn btn-success">click here</span></a></h3>
+            </div>
+            <div class="collapse" data-parent="#accordion" id="sadasya-info">
+              <div class="card-body">
+                <p class="d-sm-block"><blockquote class="quote blockquote text-center">अन्नतकोटी ब्रह्म्मांड
+ राजाधिराज योगीराज परब्रह्म श्री सचिदानंद सदगुरुं साईनाथ महाराज की जय</blockquote></p>
+  <div class="sadasya row row-content">
+        <div class="col-12 col-sm-9 offset-sm-1">
+          <div class="table-responsive">
+            <table class="sad table table-striped">
+              <tbody>
+                <tr>
+                  <td>श्री जयंत देव</td>
+                  <td>श्री एस एस भदोरिया</td>
+                  <td>श्री शुभलायक पटेल</td>
+                </tr>
+                <tr>
+                  <td>श्रीमती भाग्यश्री उंडे</td>
+                  <td>श्री ब्रजभान प्रासद कुशवाहा</td>
+                  <td>श्री ओ.एस.शुक्ला</td>
+                </tr>
+                <tr>
+                  <td>श्री सुजित कुमार किरतनिमा</td>
+                  <td>श्रीमती सुशीला अहिरवार</td>
+                  <td>श्री दिलीप निमजे</td>
+                </tr>
+                <tr>
+                  <td>श्री प्रकाश पराते</td>
+                  <td>श्री सुधीर निगम</td>
+                  <td>श्री रवि कुमार माथुर</td>
+                </tr>
+                <tr>
+                  <td>श्री राधेश्याम पटेल</td>
+                  <td>श्री जी.एल.पटेल</td>
+                  <td>श्री कमलेश रघुवंशी</td>
+                </tr>
+                <tr>
+                  <td>श्री विठल नानू सुशिविने</td>
+                  <td>श्री सुशील कुमार पाण्डेय</td>
+                  <td>श्रीमती उषा खेरवार प्रसाद</td>
+                </tr>
+                <tr>
+                  <td>श्री नानक राम सदारगानी </td>
+                  <td>श्रीमती उषा श्रीवास्तव</td>
+                  <td>श्री दयाराम मोटवानी</td>
+                </tr>
+                <tr>
+                  <td>श्री प्रवीण वैष्णव </td>
+                  <td>श्रीमती ऋतु श्रीवास्तव</td>
+                  <td>श्रीमती संध्या वर्मा</td>
+                </tr>
+                <tr>
+                  <td>श्रीमती कल्पना बोहरे </td>
+                  <td>श्रीमती निर्मला हिंगोरानी</td>
+                  <td>श्री नवनीत गुप्ता</td>
+                </tr>
+                <tr>
+                  <td>श्री राजेश शर्मा</td>
+                  <td>श्री जनार्दन पटेल</td>
+                  <td>श्री जीतेन्द्र गौर</td>
+                </tr>
+                <tr>
+                  <td>श्रीमती लक्ष्मी परोचा</td>
+                  <td>श्रीमती करुणा कुम्भारे</td>
+                  <td>श्री वसंत तलवेलकर</td>
+                </tr>
+                <tr>
+                  <td>श्री आशीष वाजपेयी</td>
+                  <td>श्री किशोर कुमार काकडे</td>
+                  <td>श्रीमती राजेश्वरी तरंजी</td>
+                </tr>
+                <tr>
+                  <td>श्री अमित श्रीवास्तव</td>
+                  <td>श्री शत्रुघ्न चन्द्रवंशी </td>
+                  <td>श्री सुनील कुमार भटनागर</td>
+                </tr>
+                <tr>
+                  <td>श्री राकेश रायकवार</td>
+                  <td>श्री पियूष वजकर</td>
+                  <td>श्री हीरालाल सोंधिया</td>
+                </tr>
+                <tr>
+                  <td>श्री एस .एन .पाटने</td>
+                  <td>डॉ रविन्द्र कुमार द्वेदी</td>
+                  <td>श्रीमती स्मिता पराते</td>
+                </tr>
+                <tr>
+                  <td>श्री अशोक निगम</td>
+                  <td>श्री सुशील सस्क्सेना</td>
+                  <td>श्री अनिल गुप्ता</td>
+                </tr>
+                <tr>
+                  <td>श्री दीपक उज्जेनकर</td>
+                  <td>श्री राजेश सक्स्सेना</td>
+                  <td>श्री आर.पी.आलपुरिया</td>
+                </tr>
+                <tr>
+                  <td>श्री राघवेन्द्र कुमार पटेल </td>
+                  <td>श्रीमती रेखा पराते</td>
+                  <td>श्रीमती गीता चौहान</td>
+                </tr>
+                <tr>
+                  <td>श्रीमती विद्या सिंह</td>
+                  <td>श्रीमती मनोरमा सोमानी</td>
+                  <td>श्री एस.ऍन.श्रीवास्तव</td>
+                </tr>
+                <tr>
+                  <td>श्री देवकीनंदन सोनी</td>
+                  <td>श्री दिनेशसिंह राजवाड</td>
+                  <td>श्री मयंक नारायनी</td>
+                </tr>
+                <tr>
+                  <td>श्री मधुसुदन काशीनाथ</td>
+                  <td>श्री गोपाल सराठे</td>
+                  <td>श्री अनोखीलाल बिले</td>
+                </tr>
+                <tr>
+                  <td>श्रीमती सरिता दीवान</td>
+                  <td>श्री डी.डी.निगोशकर</td>
+                  <td>श्री सुमेर सिंह  रघुवंशी</td>
+                </tr>
+                <tr>
+                  <td>श्री रवीन्द्र दिगी</td>
+                  <td>डॉ. संजय श्रीवास्तव</td>
+                  <td>सुश्री प्रीती सिंह</td>
+                </tr>
+                <tr>
+                  <td>श्रीमती रश्मि चोहान</td>
+                  <td>श्री विजित पाण्डेय</td>
+                  <td>श्रीमती महक कालरा</td>
+                </tr>
+                <tr>
+                  <td>श्रीमती निर्मला शर्मा</td>
+                  <td>श्रीमती श्वेता पुरस्वानी</td>
+                  <td>श्रीमती अर्चना सोंधिया</td>
+                </tr>
+                <tr>
+                  <td>श्री विलास सोनकुसरे</td>
+                  <td>श्री सुभाष चन्द्रसक्सेना</td>
+                  <td>श्री श्रीपाद जालवडकर</td>
+                </tr>
+                <tr>
+                  <td>श्री इन्द्रसिंह ठाकुर</td>
+                  <td>श्रीमती प्रियंका अस्ताना</td>
+                  <td>श्री सुधाकर तिवारी</td>
+                </tr>
+                <tr>
+                  <td>श्रीमती प्रतिभा डबीर</td>
+                  <td>श्री दीपक श्रीवास्तव</td>
+                  <td>श्री सुशील कुमार रेड्डी</td>
+                </tr>
+                <tr>
+                  <td>श्रीमती आरती वाजपेयी</td>
+                  <td>श्री उदयभान पटेल</td>
+                  <td>श्रीमती प्रतिभा रविन्द्र सिंह </td>
+                </tr>
+                <tr>
+                  <td>श्री सुनील कुमार विश्वकर्मा</td>
+                  <td>सुश्री संगीता जैन </td>
+                  <td>श्री धीरज रजक </td>
+                </tr>
+                <tr>
+                  <td>सुश्री निति सक्स्सेना</td>
+                  <td>श्री संजय कुमार निगम</td>
+                  <td>श्री भागीरथी पटेल</td>
+                </tr>
+                <tr>
+                  <td>श्री गणेश गायकवाड</td>
+                  <td>श्री विनोद हटवार</td>
+                  <td>श्री शंकर प्रतिभा धारकर</td>
+                </tr>
+                <tr>
+                  <td>श्री आर. के.कोरी</td>
+                  <td>श्री ललिता नामदेव</td>
+                  <td>श्रीमती प्रभा नेमा</td>
+                </tr>
+                <tr>
+                  <td>श्री नवीन गुप्ता</td>
+                  <td>श्री पी.बी.हेडाऊ</td>
+                  <td>श्री प्रदीप कुमार वैद</td>
+                </tr>
+                <tr>
+                  <td>श्री प्रफुलकुमारजिमकाते</td>
+                  <td>श्रीमती सुषमा नारखेडे</td>
+                  <td>श्री अशोक कुमार पटेल</td>
+                </tr>
+                <tr>
+                  <td>श्री कुंदन लाल बोराना</td>
+                  <td>श्रीमती रामदेवी राठोर</td>
+                  <td>श्री श्रीनिवास पटेल</td>
+                </tr>
+                <tr>
+                  <td>श्रीमती रितु रघुवंशी</td>
+                  <td>श्री अनिल गोसावी</td>
+                  <td>श्री जानरव कोल्हे</td>
+                </tr>
+                <tr>
+                  <td>श्री अरुण दंडवते</td>
+                  <td>श्री प्रमोद कुमार देकाटे</td>
+                  <td>सुश्री ज्योति शर्मा</td>
+                </tr>
+                <tr>
+                  <td>श्री संजय येवले</td>
+                  <td>श्रीमती कविता गुरेले</td>
+                  <td>श्रीमती मुन्नीबाई कुशवाह</td>
+                </tr>
+                <tr>
+                  <td>श्री कार्तिक नायर</td>
+                  <td>श्री मनोज परसराम दूर्वे</td>
+                  <td>श्री राहुल शुक्ला</td>
+                </tr>
+                <tr>
+                  <td>श्रीमती माया मालवीय</td>
+                  <td>श्री आशीष कुमार सक्स्सेना</td>
+                  <td>श्री रघुवीर सिंह </td>
+                </tr>
+                <tr>
+                  <td>श्रीमती निर्मला श्रीवास्तव</td>
+                  <td>श्री अनिल उज्जैनकर</td>
+                  <td>श्री राजीव कृपलानी</td>
+                </tr>
+                <tr>
+                  <td>श्री एचएन जैशवाल</td>
+                  <td>श्री पवन कुमार त्रिवेदी</td>
+                  <td>श्री टी.बी.सिंह</td>
+                </tr>
+                <tr>
+                  <td>श्री उदय ह्वलने</td>
+                  <td>श्री आर एस भदोरिया</td>
+                  <td>श्री मनोहरलाल श्रीवंश</td>
+                </tr>
+                <tr>
+                  <td>श्री सुनीता शर्मा</td>
+                  <td>सुश्री अंजली श्रीवास्तव</td>
+                  <td>श्री यश असल सक्सेना </td>
+                </tr>
+                <tr>
+                  <td>श्रीमती कमलेश दीक्षित</td>
+                  <td>श्री एसऍम बोरगांवकर</td>
+                  <td>श्री जगजीवन पटेल</td>
+                </tr>
+                <tr>
+                  <td>श्री आर.ए.सोंधिया</td>
+                  <td>श्री मनोहर लाल श्रीवंश</td>
+                  <td>श्री व्ही.जी.मोतेवार</td>
+                </tr>
+                <tr>
+                  <td>श्रीमती उमा बेस</td>
+                  <td>श्री नीरज सक्स्सेना</td>
+                  <td>श्री प्रवीण कुमार केवटे</td>
+                </tr>
+                <tr>
+                  <td>श्री अजय दीक्षित</td>
+                  <td>श्री राम कुमार पाण्डेय</td>
+                  <td>श्री राजेंद्र कुमार सोलंकी</td>
+                </tr>
+                <tr>
+                  <td>श्रीमती बसंतप्रभादीवान</td>
+                  <td>श्री जी.पी.चौधरी</td>
+                  <td>श्री कमल सिंह गोहिया</td>
+                </tr>
+                <tr>
+                  <td>श्री बद्रीलाल आर्य</td>
+                  <td>श्री राजेंद्र पटेल</td>
+                  <td>श्रीमती सुनीता शर्मा</td>
+                </tr>
+                <tr>
+                  <td>श्रीमती गीता श्रीवास्तव</td>
+                  <td>श्रीमती सोनाली लिखितकर</td>
+                  <td>श्री संतोष श्रीवास्तव</td>
+                </tr>
+                <tr>
+                  <td>श्री विकासबाबु श्रीवास्तव</td>
+                  <td>श्री हीरालाल गजभिये</td>
+                  <td>श्री योगेन्द्र श्रीवास्तव</td>
+                </tr>
+                <tr>
+                  <td>श्रीमती कीर्ति श्रीवास्तव</td>
+                  <td>श्री विनोद कुमार कासिव</td>
+                  <td>श्री राजहंस सिंह</td>
+                </tr>
+                <tr>
+                  <td>श्री दीपक घोटे</td>
+                  <td>श्रीमती आकांशा श्रीवास्तव</td>
+                  <td>श्री राजेश वर्मा</td>
+                </tr>
+                <tr>
+                  <td>श्रीमती रीना वर्मा</td>
+                  <td>श्रीमती गायत्री तिवारी</td>
+                  <td>श्री विजय राव धकाते</td>
+                </tr>
+                <tr>
+                  <td>श्रीमती सुनीता बावरिया</td>
+                  <td>श्री अजय मालवीय</td>
+                  <td>श्री लक्ष्मीकान्त त्रिपाठी</td>
+                </tr>
+                <tr>
+                  <td>सुश्री निशा सराटकर</td>
+                  <td>श्री परिवेश सक्स्सेना</td>
+                  <td>श्री अमित गुप्ता</td>
+                </tr>
+                <tr>
+                  <td>श्रीमती कुसुमलता</td>
+                  <td>श्री उदयवीर जाट</td>
+                  <td>श्रीमती कल्पना शर्मा</td>
+                </tr>
+                <tr>
+                  <td>श्री दीपक कुमार इसरानी</td>
+                  <td>श्री हीरालाल सोंधिया</td>
+                  <td>श्रीमती प्रियंका अस्ताना</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+</div>
+
+</div>
 
 
 
@@ -226,7 +557,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 ">
-                    <h5 >Our Address</h5>
+                    <h5 >Visit us</h5>
                     <address>
 		              श्री साईबाबा दरबार
 					  श्री बालमूर्ति साईबाबा (श्री हरीश बाबा) संस्थान

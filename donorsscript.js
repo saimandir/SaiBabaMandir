@@ -45,6 +45,8 @@ function gotdata(data) {
 
             var nameColumn = document.createElement('td');
             var dateColumn = document.createElement('td');
+            nameColumn.classList.add("text-center");
+            dateColumn.classList.add("text-center");
 
             nameColumn.innerText = name;
             dateColumn.innerText = date;

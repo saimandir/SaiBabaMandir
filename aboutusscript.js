@@ -41,21 +41,35 @@ function gotdata(data) {
             var name = db[k].Name;
             var day = db[k].Day;
             var date = db[k].Date;
+            var time = db[k].Time;
+
 
             var e = document.createElement('tr');
 
             var nameColumn = document.createElement('td');
             var dayColumn = document.createElement('td');
             var dateColumn = document.createElement('td');
+            var timeCloumn = document.createElement("td");
+
+
+            nameColumn.classList.add("text-center");
+            dayColumn.classList.add("text-center");
+            dateColumn.classList.add("text-center");
+            timeCloumn.classList.add("text-center");
 
             nameColumn.innerText = name;
             dayColumn.innerText = day;
             dateColumn.innerText = date;
+            timeCloumn.innerText = time;
+
 
 
             e.appendChild(dateColumn);
             e.appendChild(dayColumn);
+            e.appendChild(timeCloumn);
             e.appendChild(nameColumn);
+
+
 
 
             g.appendChild(e);
@@ -71,21 +85,35 @@ function gotdata(data) {
         var name = db[k].Name;
         var day = db[k].Day;
         var date = db[k].Date;
+        var time = db[k].Time;
+
 
         var e = document.createElement('tr');
 
         var nameColumn = document.createElement('td');
         var dayColumn = document.createElement('td');
         var dateColumn = document.createElement('td');
+        var timeColumn = document.createElement("td");
+
+
+        nameColumn.classList.add("text-center");
+        dayColumn.classList.add("text-center");
+        dateColumn.classList.add("text-center");
+        timeCloumn.classList.add("text-center");
+
 
         nameColumn.innerText = name;
         dayColumn.innerText = day;
         dateColumn.innerText = date;
+        timeCloumn.innerText = time;
+
 
 
         e.appendChild(dateColumn);
         e.appendChild(dayColumn);
+        e.appendChild(timeCloumn);
         e.appendChild(nameColumn);
+
 
 
         g.appendChild(e);

@@ -57,7 +57,7 @@ function AddEvent(){
 
     const name = document.getElementById("EventName");
     const date = document.getElementById("EventDate");
-
+    const time = document.getElementById("EventTime");
 
 
     if(name.value === ""){
@@ -65,6 +65,9 @@ function AddEvent(){
     }
     else if(date.value === ""){
         alert("Enter the Date");
+    }
+    else if(time.value ===""){
+        alert("Enter the Time");
     }
     else{
         EventCount = 2;
@@ -74,6 +77,28 @@ function AddEvent(){
         var dateString = e[parseInt(date.value[5] + date.value[6])  -1] + date.value[8] + date.value[9] + "," + date.value[0]+date.value[1]+date.value[2]+date.value[3]
 
         d = new Date(dateString);
+        var dateformating = date.value[8] + date.value[9] + " "+ e[parseInt(date.value[5] + date.value[6])  -1] + date.value[0]+date.value[1]+date.value[2]+date.value[3]
+
+
+        var gettime = time.value
+        var timeformatting = "";
+
+
+        if(parseInt(gettime[0] + gettime[1]) === 12){
+            timeformatting = 12 + gettime[2] + gettime[3] + gettime[4] +  " PM";
+        }
+        else if(parseInt(gettime[0] + gettime[1]) === 0){
+            timeformatting = 12 + gettime[2] + gettime[3] + gettime[4] +  " AM";
+
+        }
+        else if(parseInt(gettime[0] + gettime[1]) >12){
+            timeformatting = String(parseInt(gettime[0] + gettime[1]) - 12) + gettime[2] + gettime[3] + gettime[4] +  " PM";
+
+
+        }
+        else{
+            timeformatting = String(parseInt(gettime[0] + gettime[1])) + gettime[2] + gettime[3] + gettime[4] +  " AM";
+        }
 
 
 
@@ -83,8 +108,9 @@ function AddEvent(){
 
         var data = {
             Name : name.value,
-            Date: date.value,
-            Day: days[d.getDay()]
+            Date: dateformating,
+            Day: days[d.getDay()],
+            Time: timeformatting
         }
 
         Eventref.push(data);
@@ -121,9 +147,14 @@ function AddDonar(){
 
         var Donarref = database.ref('Donar Information/');
 
+
+        var e = ["January ", "February ","March " , "April ", "May ", "June ", "July ", "August ", "September ", "October ", "November ", "December "];
+        var dateformating = date.value[8] + date.value[9] + " "+ e[parseInt(date.value[5] + date.value[6])  -1] + date.value[0]+date.value[1]+date.value[2]+date.value[3]
+
+
         var data = {
             Name : name.value,
-            Date: date.value,
+            Date: dateformating,
             Amount: amount.value
 
         }
@@ -164,11 +195,32 @@ function Donargotdata(data){
     const donartable = document.getElementById("DonarTable");
 
     if(DonarCount === 0) {
+
+        const hd1 = document.createElement("tr");
+        const hd2 = document.createElement("th");
+        const hd3 = document.createElement("th");
+        const hd4 = document.createElement("th");
+        const hd5 = document.createElement("th");
+
+        hd2.innerText = "DONAR NAME";
+        hd1.appendChild(hd2);
+        hd3.innerText = "DONAR AMOUNT";
+        hd1.appendChild(hd3);
+        hd4.innerText = "DONAR DATE";
+        hd1.appendChild(hd4);
+        hd5.innerText="INSTRUCTION";
+        hd1.appendChild(hd5);
+
+        donartable.appendChild(hd1);
+
+
+
         for (let i = 0; i < keys.length; i++) {
             var k = keys[i];
             var name = db[k].Name;
             var amount = db[k].Amount;
             var date = db[k].Date;
+
 
             const e = document.createElement("tr");
             const a = document.createElement("td");
@@ -189,9 +241,9 @@ function Donargotdata(data){
             e.appendChild(b);
             c.innerText = date;
             e.appendChild(c);
+
             d.innerText="press to delete";
             e.appendChild(d);
-
 
 
             donartable.appendChild(e);
@@ -199,35 +251,36 @@ function Donargotdata(data){
 
         }
     }
-        else if(DonarCount ===2 ){
-                var k = keys[keys.length -1];
-                var name = db[k].Name;
-                var amount = db[k].Amount;
-                var date = db[k].Date;
+    else if(DonarCount ===2 ){
+        var k = keys[keys.length -1];
+        var name = db[k].Name;
+        var amount = db[k].Amount;
+        var date = db[k].Date;
 
-                const e = document.createElement("tr");
-                const a = document.createElement("td");
-                const b = document.createElement("td");
-                const c = document.createElement("td");
+        const e = document.createElement("tr");
+        const a = document.createElement("td");
+        const b = document.createElement("td");
+        const c = document.createElement("td");
+        const d = document.createElement("td");
 
-                e.onclick = DonarDeleter;
-                DonarDeleteId++;
+        DonarDeleteId++;
 
-                DonarKeys.push(k);
-                a.innerText = name;
-                e.appendChild(a);
-                b.innerText = amount;
-                e.appendChild(b);
-                c.innerText = date;
-                e.appendChild(c);
+        DonarKeys.push(k);
+        a.innerText = name;
+        e.appendChild(a);
+        b.innerText = amount;
+        e.appendChild(b);
+        c.innerText = date;
+        e.appendChild(c);
+        e.appendChild(d);
 
-                donartable.appendChild(e);
-                DonarCount =1;
+        donartable.appendChild(e);
+        DonarCount =1;
 
 
-        }
-        else{
-
+    }
+    else{
+        console.log("This will never be called")
     }
 
 
@@ -242,20 +295,25 @@ function Donarerrdata(){
 function Eventgotdata(data){
 
     if(EventCount ===0 ){
-    const db = data.val();
-    const keys = Object.keys(db);
-    console.log("running");
-    const donartable = document.getElementById("EventTable");
+        const db = data.val();
+        const keys = Object.keys(db);
+        console.log("running");
+        const donartable = document.getElementById("EventTable");
+
         const hd1 = document.createElement("tr");
         const hd2 = document.createElement("th");
         const hd3 = document.createElement("th");
         const hd4 = document.createElement("th");
         const hd5 = document.createElement("th");
+        const hd6 = document.createElement("th");
+
 
         hd2.innerText = "EVENT NAME";
         hd1.appendChild(hd2);
         hd3.innerText = "EVENT DAY";
         hd1.appendChild(hd3);
+        hd6.innerText = "EVENT TIME";
+        hd1.appendChild(hd6);
         hd4.innerText = "EVENT DATE";
         hd1.appendChild(hd4);
         hd5.innerText="INSTRUCTION";
@@ -264,43 +322,47 @@ function Eventgotdata(data){
 
         donartable.appendChild(hd1);
 
-    for (let i=0; i< keys.length; i++) {
-        var k = keys[i];
-        var name = db[k].Name;
-        var day = db[k].Day;
-        var date = db[k].Date;
+        for (let i=0; i< keys.length; i++) {
+            var k = keys[i];
+            var name = db[k].Name;
+            var day = db[k].Day;
+            var date = db[k].Date;
+            var time = db[k].Time;
 
 
-        EventKeys.push(k);
-        Eventind.push(EventDeleteId);
+            EventKeys.push(k);
+            Eventind.push(EventDeleteId);
 
 
-        const e = document.createElement("tr");
-        const a = document.createElement("td");
-        const b = document.createElement("td");
-        const c = document.createElement("td");
-        const d = document.createElement("td");
+            const e = document.createElement("tr");
+            const a = document.createElement("td");
+            const b = document.createElement("td");
+            const c = document.createElement("td");
+            const d = document.createElement("td");
+            const f = document.createElement("td");
+
+            e.id = EventDeleteId;
+            EventDeleteId++;
+            e.onclick = EventDeleter;
 
 
-        e.id = EventDeleteId;
-        EventDeleteId++;
-        e.onclick = EventDeleter;
 
+            a.innerText = name;
+            e.appendChild(a);
+            b.innerText = day;
+            e.appendChild(b);
+            f.innerText = time;
+            e.appendChild(f);
+            c.innerText = date;
+            e.appendChild(c);
 
+            d.innerText="press to delete";
+            e.appendChild(d);
 
-        a.innerText = name;
-        e.appendChild(a);
-        b.innerText = day;
-        e.appendChild(b);
-        c.innerText = date;
-        e.appendChild(c);
-        d.innerText="press to delete";
-        e.appendChild(d);
+            donartable.appendChild(e);
+            EventCount = 1;
 
-        donartable.appendChild(e);
-        EventCount = 1;
-
-    }
+        }
 
 
 
@@ -317,16 +379,17 @@ function Eventgotdata(data){
         var name = db[k].Name;
         var day = db[k].Day;
         var date = db[k].Date;
+        var time = db[k].Time;
 
         const e = document.createElement("tr");
         const a = document.createElement("td");
         const b = document.createElement("td");
         const c = document.createElement("td");
         const d = document.createElement("td");
+        const f = document.createElement("td");
 
 
         EventKeys.push(k);
-        e.onclick = EventDeleter;
 
         EventDeleteId++;
 
@@ -334,9 +397,11 @@ function Eventgotdata(data){
         e.appendChild(a);
         b.innerText = day;
         e.appendChild(b);
+        f.innerText = time;
+        e.appendChild(f);
         c.innerText = date;
         e.appendChild(c);
-        d.innerText="press to delete";
+
         e.appendChild(d);
 
         Eventtable.appendChild(e);
