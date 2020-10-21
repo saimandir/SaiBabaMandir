@@ -55,18 +55,19 @@
 }
 
 .car{
-	background-color: #F7A807FF; 
+	background-color: #F7A807FF;
 }
 
 .body{
-	background-color: #F79107FF; 
+	background-color: #F79107FF;
+  color:green;
 }
 .mb-0{
 	text-decoration: underline;
 }
 
 .card-body{
-	background-color:#FFC000FF; 
+	background-color:#FFC000FF;
 }
 
 
@@ -108,8 +109,25 @@
   margin-bottom: 2%;
 }
 
+.sad{
+  color:blue;
+}
+
+.font{
+  color:red;
+  background-color: white;
+}
+
+
+@media(min-width: 414px){
+  .sai{
+    margin-top: 5em;
+    font-size:150%;
+  }
+}
+
+
 .sign-out{
 	margin-top:5em;
 
 }
-
